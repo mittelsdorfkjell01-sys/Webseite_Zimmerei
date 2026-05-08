@@ -1,4 +1,7 @@
+import Lenis from 'https://unpkg.com/lenis@1.1.14/dist/lenis.mjs';
+
 // Smooth scroll
+
 const lenis = new Lenis({
   duration: 1.2,
   smoothWheel: true,
