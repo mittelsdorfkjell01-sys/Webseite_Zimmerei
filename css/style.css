@@ -981,6 +981,10 @@ body {
     height: 220px;
   }
 
+  .projekt-images--equal img:last-child {
+    object-position: top;
+  }
+
   .form-row { grid-template-columns: 1fr; }
 
   .kontakt-tel { font-size: 28px; }
