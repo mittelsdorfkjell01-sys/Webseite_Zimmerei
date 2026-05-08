@@ -132,6 +132,8 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 22px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
