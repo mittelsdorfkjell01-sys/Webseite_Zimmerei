@@ -168,6 +168,20 @@ body {
   display: block;
 }
 
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-logo-tagline {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--color-text-light);
+}
+
 .nav-right {
   display: flex;
   align-items: center;
