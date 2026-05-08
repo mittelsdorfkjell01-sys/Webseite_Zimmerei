@@ -1,3 +1,15 @@
+// Smooth scroll
+const lenis = new Lenis({
+  duration: 1.2,
+  smoothWheel: true,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
 // Sticky nav — add/remove .scrolled class
 const nav = document.getElementById('nav');
 if (nav) {
