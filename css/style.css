@@ -569,7 +569,7 @@ body {
 
 .projekt-images--equal img {
   grid-column: auto;
-  height: 240px;
+  height: 340px;
   width: 100%;
   object-fit: cover;
   object-position: center;
