@@ -567,6 +567,19 @@ body {
   border-radius: 2px;
 }
 
+.projekt-images--equal img {
+  grid-column: auto;
+  height: 240px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+}
+
+.projekt-images--equal img:last-child {
+  object-position: bottom;
+}
+
 .projekt-card h3 {
   margin-bottom: 12px;
 }
