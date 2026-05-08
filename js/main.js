@@ -7,8 +7,9 @@ if (nav) {
 }
 
 // Hamburger / mobile menu toggle
-const hamburger  = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
+const hamburger   = document.getElementById('hamburger');
+const mobileMenu  = document.getElementById('mobile-menu');
+const mobileClose = document.getElementById('mobile-close');
 
 function toggleMenu(open) {
   if (!hamburger || !mobileMenu) return;
@@ -23,6 +24,10 @@ if (hamburger) {
   hamburger.addEventListener('click', () => {
     toggleMenu(!mobileMenu.classList.contains('open'));
   });
+}
+
+if (mobileClose) {
+  mobileClose.addEventListener('click', () => toggleMenu(false));
 }
 
 // Close mobile menu when any nav link or tel is tapped
