@@ -359,6 +359,14 @@ body {
   line-height: 1.3;
 }
 
+.hero-tagline br {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero-tagline br { display: block; }
+}
+
 .hero-sub {
   font-size: 18px;
   line-height: 1.72;
