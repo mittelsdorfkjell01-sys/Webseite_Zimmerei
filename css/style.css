@@ -973,6 +973,14 @@ body {
 
   .projekt-images img:not(:first-child) { height: 140px; }
 
+  .projekt-images--equal {
+    grid-template-columns: 1fr;
+  }
+
+  .projekt-images--equal img {
+    height: 220px;
+  }
+
   .form-row { grid-template-columns: 1fr; }
 
   .kontakt-tel { font-size: 28px; }
