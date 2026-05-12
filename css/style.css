@@ -615,6 +615,10 @@ body {
   border-radius: 2px;
 }
 
+.projekt-images--equal img:first-child {
+  object-position: 50% 70%;
+}
+
 .projekt-images--equal img:last-child {
   object-position: bottom;
 }
