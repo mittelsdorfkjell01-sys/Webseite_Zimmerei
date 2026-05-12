@@ -960,6 +960,8 @@ body {
 
   .hero-content { padding-right: 0; }
 
+  .hero-image-wrap { margin-right: 0; }
+
   .hero-image-wrap img { height: 460px; }
 
   .leistungen-grid { grid-template-columns: repeat(2, 1fr); }
