@@ -596,6 +596,7 @@ body {
   height: 300px;
   width: 100%;
   object-fit: cover;
+  object-position: center;
   border-radius: 2px;
 }
 
@@ -603,6 +604,7 @@ body {
   height: 180px;
   width: 100%;
   object-fit: cover;
+  object-position: center;
   border-radius: 2px;
 }
 
@@ -615,11 +617,11 @@ body {
   border-radius: 2px;
 }
 
-.projekt-images--equal img:first-child {
+.projekt-images.projekt-images--equal img:first-child {
   object-position: 50% 85%;
 }
 
-.projekt-images--equal img:last-child {
+.projekt-images.projekt-images--equal img:last-child {
   object-position: 50% 100%;
 }
 
