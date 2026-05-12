@@ -179,10 +179,23 @@
 
         <article class="leistung-card leistung-card--featured">
           <svg class="leistung-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <path d="M8 40V22L24 11L40 22V40H8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-            <rect x="19" y="29" width="10" height="11" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M34 12L40 8M34 8L40 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <circle cx="37" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+            <!-- Ground line -->
+            <line x1="2" y1="43" x2="46" y2="43" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Building body -->
+            <rect x="5" y="15" width="38" height="28" stroke="currentColor" stroke-width="1.5"/>
+            <!-- Gable roof -->
+            <path d="M5 15L24 5L43 15" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <!-- Round gable window (Rundfenster) -->
+            <circle cx="24" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/>
+            <!-- Upper floor: 3 windows -->
+            <rect x="8" y="18" width="7" height="8" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="20" y="18" width="8" height="8" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="33" y="18" width="7" height="8" stroke="currentColor" stroke-width="1.5"/>
+            <!-- Ground floor: 2 side windows -->
+            <rect x="8" y="31" width="7" height="8" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="33" y="31" width="7" height="8" stroke="currentColor" stroke-width="1.5"/>
+            <!-- Arched entrance door -->
+            <path d="M20 43L20 35A4 4 0 0 0 28 35L28 43" stroke="currentColor" stroke-width="1.5"/>
           </svg>
           <div>
             <h3>Altbausanierung</h3>
