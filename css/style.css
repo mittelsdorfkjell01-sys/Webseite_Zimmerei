@@ -616,11 +616,11 @@ body {
 }
 
 .projekt-images--equal img:first-child {
-  object-position: 50% 70%;
+  object-position: 50% 85%;
 }
 
 .projekt-images--equal img:last-child {
-  object-position: bottom;
+  object-position: 50% 100%;
 }
 
 .projekt-card h3 {
