@@ -434,6 +434,45 @@ body {
   z-index: 1;
 }
 
+.leistung-card--featured {
+  grid-column: 1 / -1;
+  background-color: var(--color-accent);
+  padding: 52px 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 48px;
+  border-right-color: var(--color-line);
+  border-bottom-color: var(--color-line);
+}
+
+.leistung-card--featured:hover {
+  border-color: var(--color-line);
+  background-color: var(--color-accent);
+  position: static;
+}
+
+.leistung-card--featured .leistung-icon {
+  width: 56px;
+  height: 56px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.leistung-card--featured h3 {
+  color: var(--color-white);
+  font-size: clamp(22px, 2.5vw, 30px);
+  margin-bottom: 14px;
+}
+
+.leistung-card--featured p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  max-width: 600px;
+}
+
 .leistung-icon {
   width: 44px;
   height: 44px;
@@ -966,6 +1005,16 @@ body {
   .leistungen-grid { grid-template-columns: 1fr; }
 
   .leistung-card { padding: 36px 24px; }
+
+  .leistung-card--featured {
+    flex-direction: column;
+    padding: 36px 24px;
+    gap: 24px;
+  }
+
+  .leistung-card--featured .leistung-icon {
+    margin-top: 0;
+  }
 
   .konzept-image img { height: 280px; }
 
