@@ -57,7 +57,7 @@ ul { list-style: none; }
 ============================================ */
 h1, h2, h3 {
   font-family: var(--font-serif);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.18;
   color: var(--color-text);
 }
