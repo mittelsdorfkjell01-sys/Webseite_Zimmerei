@@ -134,7 +134,7 @@
 
           <p class="hero-sub">
             Mein ganzes Berufsleben habe ich mit Holz gebaut. 
-            Heute nehme ich mir die Projekte vor, die ich wirklich begleiten kann — persönlich, sorgfältig, mit kurzen Wartezeiten.
+            Heute nehme ich mir die Projekte vor, die ich wirklich begleiten kann - persönlich, sorgfältig, mit kurzen Wartezeiten.
             So wie Handwerk sein sollte.
           </p>
 
@@ -456,10 +456,9 @@
 
         <form
           class="contact-form"
-          action="mailto:info@zimmerei-mittelsdorf.de"
-          method="post"
-          enctype="text/plain"
+          id="contact-form"
           aria-label="Anfrage senden"
+          novalidate
         >
           <div class="form-row">
             <div class="form-group">
@@ -483,7 +482,9 @@
               placeholder="Beschreiben Sie Ihr Anliegen"></textarea>
           </div>
 
-          <button type="submit" class="btn-submit">Anfrage absenden</button>
+          <button type="submit" class="btn-submit" id="btn-submit">Anfrage absenden</button>
+
+          <div id="form-status" role="alert" aria-live="polite"></div>
 
           <p class="form-privacy">
             Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten zur Bearbeitung

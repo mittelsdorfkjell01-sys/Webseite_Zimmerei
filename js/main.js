@@ -39,3 +39,55 @@ document.querySelectorAll('.mobile-nav-link, .mobile-tel').forEach(link => {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') toggleMenu(false);
 });
+
+// Contact form — send via Resend API
+const contactForm = document.getElementById('contact-form');
+const formStatus  = document.getElementById('form-status');
+const btnSubmit   = document.getElementById('btn-submit');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    const name     = document.getElementById('name').value.trim();
+    const telefon  = document.getElementById('telefon').value.trim();
+    const email    = document.getElementById('email').value.trim();
+    const nachricht = document.getElementById('nachricht').value.trim();
+
+    if (!name || !telefon || !email || !nachricht) {
+      showStatus('Bitte alle Pflichtfelder ausfüllen.', 'error');
+      return;
+    }
+
+    btnSubmit.disabled = true;
+    btnSubmit.textContent = 'Wird gesendet…';
+    formStatus.innerHTML = '';
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, telefon, email, nachricht }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        showStatus('Vielen Dank! Ihre Anfrage wurde gesendet. Ich melde mich so bald wie möglich.', 'success');
+        contactForm.reset();
+      } else {
+        showStatus(data.error || 'Fehler beim Senden. Bitte versuchen Sie es erneut.', 'error');
+      }
+    } catch {
+      showStatus('Verbindungsfehler. Bitte versuchen Sie es erneut.', 'error');
+    } finally {
+      btnSubmit.disabled = false;
+      btnSubmit.textContent = 'Anfrage absenden';
+    }
+  });
+}
+
+function showStatus(message, type) {
+  formStatus.textContent = message;
+  formStatus.className = 'form-status form-status--' + type;
+}
