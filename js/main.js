@@ -76,7 +76,8 @@ if (contactForm) {
         showStatus('Vielen Dank! Ihre Anfrage wurde gesendet. Ich melde mich so bald wie möglich.', 'success');
         contactForm.reset();
       } else {
-        showStatus(data.error || 'Fehler beim Senden. Bitte versuchen Sie es erneut.', 'error');
+        const msg = data.detail ? `${data.error} (${data.detail})` : (data.error || 'Fehler beim Senden.');
+        showStatus(msg, 'error');
       }
     } catch {
       showStatus('Verbindungsfehler. Bitte versuchen Sie es erneut.', 'error');

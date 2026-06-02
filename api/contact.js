@@ -51,15 +51,20 @@ module.exports = async function handler(req, res) {
       }),
     });
 
+    const data = await response.json();
+
     if (!response.ok) {
-      const data = await response.json();
-      throw new Error(data.message || 'Resend-Fehler');
+      console.error('Resend API Fehler:', response.status, JSON.stringify(data));
+      return res.status(500).json({
+        error: 'Fehler beim Senden.',
+        detail: data.message || data.name || JSON.stringify(data),
+      });
     }
 
     return res.status(200).json({ success: true });
   } catch (err) {
     console.error('Kontaktformular Fehler:', err.message);
-    return res.status(500).json({ error: 'Fehler beim Senden. Bitte versuchen Sie es erneut.' });
+    return res.status(500).json({ error: 'Verbindungsfehler zur Mail-API.', detail: err.message });
   }
 };
 
