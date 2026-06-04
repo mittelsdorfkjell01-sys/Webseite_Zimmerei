@@ -806,6 +806,30 @@ body {
 }
 
 /* ============================================
+   SEO REGION
+============================================ */
+.seo-region {
+  background-color: var(--color-bg);
+  padding: 48px 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.seo-region-heading {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.seo-region-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-text-light);
+  max-width: 820px;
+}
+
+/* ============================================
    FOOTER
 ============================================ */
 .footer {
