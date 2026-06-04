@@ -1,0 +1,43 @@
+# ============================================
+#  SECURITY — Zimmerei Mittelsdorf
+# ============================================
+
+# Kein Directory Listing
+Options -Indexes
+
+# Sensible Dateien sperren
+RedirectMatch 404 /\.git
+RedirectMatch 404 /\.env
+RedirectMatch 404 /package(-lock)?\.json$
+
+# ============================================
+#  HTTP SECURITY HEADERS
+# ============================================
+<IfModule mod_headers.c>
+    # Clickjacking verhindern
+    Header always set X-Frame-Options "DENY"
+
+    # MIME-Type Sniffing unterbinden
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Referrer nur auf gleicher Origin
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Gerätezugriffe einschränken
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+    # HTTPS erzwingen (1 Jahr, inkl. Subdomains)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Content Security Policy
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:"
+</IfModule>
+
+# ============================================
+#  HTTPS ERZWINGEN
+# ============================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
