@@ -665,7 +665,7 @@ body {
 }
 
 .projekt-images.projekt-images--equal img:last-child {
-  object-position: 50% 100%;
+  object-position: 50% 0%;
 }
 
 @media (min-width: 1025px) {
@@ -1132,6 +1132,8 @@ body {
   .leistung-card--featured .leistung-icon {
     margin-top: 0;
   }
+
+  .konzept-image { order: 0; }
 
   .konzept-image img { height: 280px; }
 
