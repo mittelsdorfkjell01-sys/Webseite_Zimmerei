@@ -635,46 +635,45 @@ body {
   margin-bottom: 28px;
 }
 
-.projekt-images img:first-child {
+.projekt-images picture { display: block; min-width: 0; }
+
+.projekt-images picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+}
+
+.projekt-images picture:first-child {
   grid-column: 1 / -1;
   height: 300px;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 2px;
 }
 
-.projekt-images img:not(:first-child) {
+.projekt-images picture:not(:first-child) {
   height: 180px;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 2px;
 }
 
-.projekt-images--equal img {
+.projekt-images--equal picture {
   grid-column: auto;
   height: 340px;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 2px;
 }
 
-.projekt-images.projekt-images--equal img:first-child {
+.projekt-images.projekt-images--equal picture:first-child img {
   object-position: 50% 95%;
 }
 
-.projekt-images.projekt-images--equal img:last-child {
+.projekt-images.projekt-images--equal picture:last-child img {
   object-position: 50% 0%;
 }
 
 @media (min-width: 1025px) {
-  .projekt-images.projekt-images--equal img:first-child {
+  .projekt-images.projekt-images--equal picture:first-child img {
     object-position: 50% 0%;
   }
 
-  .projekt-images.projekt-images--equal img:last-child {
+  .projekt-images.projekt-images--equal picture:last-child img {
     object-position: 50% 0%;
   }
 }
@@ -1152,19 +1151,19 @@ body {
 
   .projekt-images { grid-template-columns: 1fr; }
 
-  .projekt-images img:first-child { height: 240px; }
+  .projekt-images picture:first-child { height: 240px; }
 
-  .projekt-images img:not(:first-child) { height: 240px; }
+  .projekt-images picture:not(:first-child) { height: 240px; }
 
   .projekt-images--equal {
     grid-template-columns: 1fr;
   }
 
-  .projekt-images--equal img {
+  .projekt-images--equal picture {
     height: 220px;
   }
 
-  .projekt-images--equal img:last-child {
+  .projekt-images--equal picture:last-child img {
     object-position: top;
   }
 
