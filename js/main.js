@@ -73,7 +73,7 @@ if (contactForm) {
       const data = await res.json();
 
       if (res.ok) {
-        showStatus('Vielen Dank! Ihre Anfrage wurde gesendet. Ich melde mich so bald wie möglich.', 'success');
+        showStatus('Vielen Dank! Ihre Anfrage wurde gesendet.', 'success');
         contactForm.reset();
       } else {
         const msg = data.detail ? `${data.error} (${data.detail})` : (data.error || 'Fehler beim Senden.');
