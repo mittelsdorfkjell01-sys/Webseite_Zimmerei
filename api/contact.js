@@ -17,7 +17,7 @@ module.exports = async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Kontaktformular <onboarding@resend.dev>',
+        from: 'Kontaktformular Zimmerei Mittelsdorf <noreply@zimmerei-mittelsdorf.de>',
         to: 'zimmerei-mittelsdorf@t-online.de',
         reply_to: email,
         subject: `Neue Anfrage von ${name}`,
