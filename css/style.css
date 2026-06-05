@@ -682,6 +682,18 @@ body {
   margin-bottom: 12px;
 }
 
+.projekt-credit {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--color-text-light);
+}
+
+.projekt-credit a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .projekt-card .section-label {
   margin-bottom: 6px;
 }
