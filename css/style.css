@@ -192,7 +192,7 @@ body {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
   font-family: var(--font-serif);
   font-size: 22px;
   font-weight: 500;
@@ -201,8 +201,8 @@ body {
 }
 
 .nav-logo-img {
-  height: 100px;
-  width: 300px;
+  height: 72px;
+  width: 220px;
   object-fit: contain;
   display: block;
 }
