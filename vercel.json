@@ -5,7 +5,12 @@
       "has": [{ "type": "host", "value": "www.zimmerei-mittelsdorf.de" }],
       "destination": "https://zimmerei-mittelsdorf.de/:path*",
       "permanent": true
-    }
+    },
+    { "source": "/kontakt.html",    "destination": "/#kontakt",    "permanent": true },
+    { "source": "/leistungen.html", "destination": "/#leistungen", "permanent": true },
+    { "source": "/projekte.html",   "destination": "/#projekte",   "permanent": true },
+    { "source": "/referenzen.html", "destination": "/#projekte",   "permanent": true },
+    { "source": "/ueber-uns.html",  "destination": "/#ueber-uns",  "permanent": true }
   ],
   "headers": [
     {
