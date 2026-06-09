@@ -371,12 +371,6 @@ body {
   margin-bottom: 36px;
 }
 
-.hero-eyebrow-line {
-  width: 32px;
-  height: 1px;
-  background-color: var(--color-accent);
-  flex-shrink: 0;
-}
 
 .hero-eyebrow-text {
   font-size: 11px;
