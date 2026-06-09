@@ -1,0 +1,88 @@
+# robots.txt – Zimmerei Mittelsdorf, Kiel
+# Ziel: maximale Sichtbarkeit in klassischer Suche UND in KI-Antworten
+# (ChatGPT/OpenAI, Claude/Anthropic, Perplexity, Google AI Overviews/Gemini, Apple).
+# Strategie: ALLES erlauben. Ein lokaler Handwerksbetrieb will gefunden und
+# zitiert werden – jede Sperre kostet hier Reichweite.
+# Stand: 2026
+
+# ============================================================
+# 1) Alle klassischen Suchmaschinen (Google, Bing, DuckDuckGo …)
+# ============================================================
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# ============================================================
+# 2) OpenAI / ChatGPT
+#    GPTBot = Training | OAI-SearchBot = Suche/Zitate | ChatGPT-User = Live-Abruf
+# ============================================================
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# ============================================================
+# 3) Anthropic / Claude
+#    ClaudeBot = Training | Claude-SearchBot = Suche | Claude-User = Live-Abruf
+#    anthropic-ai / claude-web = ältere Kennungen (sicherheitshalber mit drin)
+# ============================================================
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: claude-web
+Allow: /
+
+# ============================================================
+# 4) Perplexity
+# ============================================================
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# ============================================================
+# 5) Google AI (Gemini / AI Overviews) und Apple Intelligence
+#    Google-Extended steuert NUR die KI-Nutzung, nicht die normale Google-Suche.
+# ============================================================
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ============================================================
+# 6) Weitere KI-/Daten-Crawler (Microsoft, Meta, Amazon, Common Crawl, Cohere)
+# ============================================================
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# ============================================================
+# Sitemap
+# ============================================================
+Sitemap: https://zimmerei-mittelsdorf.de/sitemap.xml
