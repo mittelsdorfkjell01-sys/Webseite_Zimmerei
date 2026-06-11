@@ -1108,7 +1108,16 @@ body {
 
   .section { padding: 56px 0; scroll-margin-top: 80px; }
 
-  .nav { padding: 16px 20px; }
+  .nav { padding: 16px 12px; }
+
+  /* Mobile-Header: Logo kleiner & weiter links, Schriftzug daneben, Tagline aus */
+  .nav-logo { gap: 8px; }
+
+  .nav-logo-img { height: 48px; width: auto; }
+
+  .nav-logo-text { flex-direction: row; align-items: center; }
+
+  .nav-logo-tagline { display: none; }
 
   .nav-links,
   .nav-tel { display: none; }
